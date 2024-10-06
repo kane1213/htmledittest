@@ -1,1 +1,1 @@
-var editor=null;function save(){document.getElementById("output").innerText=editor.value}window.onload=function(){(editor=Jodit.make("#editor",{width:"49%",height:500,enter:"div"})).element.addEventListener("change",save)};
+var editor=null;function save(){localStorage.setItem("content",editor.value)}window.onload=function(){editor=Jodit.make("#editor",{height:500,enter:"div"});var e=localStorage.getItem("content")||"";editor.value=e,editor.element.addEventListener("change",function(){document.getElementById("output").innerText=editor.value})};

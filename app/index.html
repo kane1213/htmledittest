@@ -15,8 +15,10 @@
   </head>
   <body>
     <div class="app">
-      <textarea id="editor" rows="10"></textarea>
-      <div style="width: 1%"></div>
+      <div class="editorframe">
+        <textarea id="editor" rows="10"></textarea>
+        <button style="margin-top: 15px" onClick="save()">save</button>
+      </div>
       <div class="ouputframe">
         <div>OUTPUT</div>
         <div id="output"></div>

@@ -8,12 +8,18 @@ body {
     display: flex;
     padding: 10px 0;
   }
+  .editorframe {
+    flex: 1;
+    padding: 0 5px;
+  }
   .ouputframe {
     flex: 1;
+    padding: 0 5px;
   }
   #output {
     border: 1px solid #eee;
     border-radius: 10px;
     height: calc(100% - 20px);
+    width: 100%;
   }
 }

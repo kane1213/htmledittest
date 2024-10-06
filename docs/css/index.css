@@ -9,11 +9,17 @@ body .app {
   display: flex;
   padding: 10px 0;
 }
+body .editorframe {
+  flex: 1;
+  padding: 0 5px;
+}
 body .ouputframe {
   flex: 1;
+  padding: 0 5px;
 }
 body #output {
   border: 1px solid #eee;
   border-radius: 10px;
   height: calc(100% - 20px);
+  width: 100%;
 }
