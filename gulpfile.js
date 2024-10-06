@@ -10,7 +10,7 @@ gulp.task("minify-html", function () {
   return gulp
     .src("app/*.html")
     .pipe(htmlmin({ collapseWhitespace: true }))
-    .pipe(gulp.dest("dist"));
+    .pipe(gulp.dest("docs"));
 });
 
 gulp.task("babel-js", function () {
@@ -22,40 +22,40 @@ gulp.task("babel-js", function () {
       })
     )
     .pipe(uglify())
-    .pipe(gulp.dest("dist/js"));
+    .pipe(gulp.dest("docs/js"));
 });
 
 gulp.task("minify-js", function () {
-  return gulp.src("app/js/**/*.js").pipe(uglify()).pipe(gulp.dest("dist/js"));
+  return gulp.src("app/js/**/*.js").pipe(uglify()).pipe(gulp.dest("docs/js"));
 });
 
 gulp.task("copyFile", () => {
   // 'copyFile' 是任務名稱，可自行定義
-  return gulp.src("./index.html").pipe(gulp.dest("./dist"));
+  return gulp.src("./index.html").pipe(gulp.dest("./docs"));
 });
 
 gulp.task("compress", function (cb) {
-  pump([gulp.src("app/script/*.js"), uglify(), gulp.dest("dist/script")], cb);
+  pump([gulp.src("app/script/*.js"), uglify(), gulp.dest("docs/script")], cb);
 });
 
 gulp.task("minify", function () {
   return gulp
     .src("app/*.html")
     .pipe(htmlmin({ collapseWhitespace: true }))
-    .pipe(gulp.dest("dist"));
+    .pipe(gulp.dest("docs"));
 });
 
 function compileSass() {
   return gulp
     .src("app/scss/**/*.scss") // Source folder
     .pipe(sass().on("error", sass.logError)) // Compile SCSS to CSS
-    .pipe(gulp.dest("./dist/css")); // Output folder
+    .pipe(gulp.dest("./docs/css")); // Output folder
 }
 
 function serve() {
   browserSync.init({
     server: {
-      baseDir: "./dist",
+      baseDir: "./docs",
     },
   });
 
