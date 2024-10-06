@@ -1,0 +1,19 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+body .app {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  padding: 10px 0;
+}
+body .ouputframe {
+  flex: 1;
+}
+body #output {
+  border: 1px solid #eee;
+  border-radius: 10px;
+  height: calc(100% - 20px);
+}
