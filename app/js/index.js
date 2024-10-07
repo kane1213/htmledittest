@@ -11,7 +11,6 @@ window.onload = function () {
 
   editor.element.addEventListener("change", () => {
     document.getElementById("output").innerText = editor.value;
-
     document.getElementById("preview").innerHTML = editor.value;
   });
 };
