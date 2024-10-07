@@ -19,7 +19,20 @@ body {
   #output {
     border: 1px solid #eee;
     border-radius: 10px;
-    height: calc(100% - 20px);
+    // height: calc(100% - 20px);
+    min-height: 40px;
+    background-color: #333;
+    color: #fff;
     width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+  }
+  #preview {
+    border: 1px solid #eee;
+    border-radius: 10px;
+    // height: calc(100% - 20px);
+    min-height: 40px;
+    width: 100%;
+    padding: 10px;
   }
 }
